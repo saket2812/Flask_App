@@ -15,8 +15,12 @@
     <h2>Create To-Do</h2>
     <form action="/sumittodoitem" method="post">
         <input type="text" name="itemname" placeholder="Item Name" required>
+        <label for="itemUUID">Item UUID:</label><br>
+        <input type="text" id="itemUUID" name="itemUUID" required><br><br>
         <label for="itemId">Item ID:</label><br>
         <input type="text" id="itemId" name="itemId" required><br><br>
+        <label for="itemHash">Item Hash:</label><br>
+        <input type="text" id="itemHash" name="itemHash" required><br><br>
         <textarea name="itemDescription" placeholder="Description" required></textarea>
         <button type="submit">Insert</button>
     </form>
@@ -25,19 +29,24 @@
 <!-- <!DOCTYPE html>
 <html>
 <head>
-    <title>To-Do List</title>
-    <style>
-        body { font-family: Arial; background: #f4f4f4; padding: 20px; }
-        form { background: #fff; padding: 20px; border-radius: 5px; max-width: 400px; }
-        input, textarea { width: 100%; margin-bottom: 10px; padding: 10px; }
-    </style>
+    <title>ToDo Form</title>
 </head>
 <body>
-    <h2>Create To-Do</h2>
+    <h2>Create a To-Do Item</h2>
     <form action="/submittodoitem" method="POST">
-        <input type="text" name="itemName" placeholder="Item Name" required>
-        <textarea name="itemDescription" placeholder="Item Description" required></textarea>
-        <button type="submit">Add</button>
+        <label for="itemName">Item Name:</label><br>
+        <input type="text" id="itemName" name="itemName" required><br><br>
+
+        <label for="itemDescription">Item Description:</label><br>
+        <input type="text" id="itemDescription" name="itemDescription" required><br><br>
+
+        <input type="submit" value="Submit">
     </form>
+
+    {% if success %}
+    <script>
+        alert("Item added to DB successfully! Check using /api");
+    </script>
+    {% endif %}
 </body>
-</html> -->
+</html>
