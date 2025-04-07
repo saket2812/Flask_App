@@ -7,13 +7,16 @@
     <style>
         body { font-family: Arial; background: #f4f4f4; padding: 20px; }
         form { background: #fff; padding: 20px; border-radius: 5px; max-width: 400px; }
-        input, textarea { width: 100%; margin-bottom: 10px; padding: 10px; }
+        
+        label,input, textarea { width: 100%; margin-bottom: 10px; padding: 10px; }
     </style>
 </head>
 <body>
     <h2>Create To-Do</h2>
     <form action="/sumittodoitem" method="post">
         <input type="text" name="itemname" placeholder="Item Name" required>
+        <label for="itemId">Item ID:</label><br>
+        <input type="text" id="itemId" name="itemId" required><br><br>
         <textarea name="itemDescription" placeholder="Description" required></textarea>
         <button type="submit">Insert</button>
     </form>
