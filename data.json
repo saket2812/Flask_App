@@ -1,4 +1,19 @@
 [
-    {"Name":"Saket","Grade": "A"},
-    {"Name":"Sumit","Grade": "B"}
-]
+    {
+      "name": "Atharva",
+      "email": "Atharva@example.com"
+    },
+    {
+      "name": "Bora",
+      "email": "Bora@example.com"
+    },
+    {
+        "name":"Saket",
+        "email":"Saket@example.com"
+    },
+    {
+        "name":"Sumit",
+        "email":"Sumit@example.com"
+    }
+  ]
+  
