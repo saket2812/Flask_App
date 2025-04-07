@@ -9,6 +9,11 @@ client = MongoClient("mongodb+srv://Saket:Saket2812@tutedude.hm9ctej.mongodb.net
 db = client["mydatabase"]
 collection = db["users"]
 
+
+@app.route('/todo')
+def todo():
+    return render_template('Todo.html')
+
 @app.route('/')
 def index():
     return render_template('form.html')  # 🔄 Make sure the filename is all lowercase (form.html)
